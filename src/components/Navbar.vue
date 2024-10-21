@@ -1,7 +1,6 @@
-
 <script setup>
-import { RouterLink, useRoute } from 'vue-router';
-import logo from '@/assets/img/logo.png';
+import { RouterLink, useRoute } from "vue-router";
+import logo from "../assets/img/logo.png.jpg";
 
 const isActiveLink = (routePath) => {
   const route = useRoute();
@@ -34,7 +33,8 @@ const isActiveLink = (routePath) => {
                   'py-2',
                   'rounded-md',
                 ]"
-                >Home</RouterLink>
+                >Home</RouterLink
+              >
               <RouterLink
                 to="#services"
                 :class="[
