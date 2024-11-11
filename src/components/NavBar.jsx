@@ -15,16 +15,14 @@ const Navbar = () => {
 
 					{/* Desktop Menu */}
 					<div className="hidden md:flex md:items-center md:space-x-8">
-						{["Home", "About", "Services", "Testimonials", "Contact Us"].map(
-							(item) => (
-								<button
-									key={item}
-									className="bg-white text-gray-600 hover:bg-orange-100 hover:text-yellow-600 px-3 py-2 text-sm font-medium transition-colors duration-300 rounded"
-								>
-									{item}
-								</button>
-							)
-						)}
+						{["Home", "About", "Services", "Testimonials"].map((item) => (
+							<button
+								key={item}
+								className="bg-white text-gray-600 hover:bg-orange-300 hover:text-gray-600 px-3 py-2 text-sm font-medium transition-colors duration-300 rounded"
+							>
+								{item}
+							</button>
+						))}
 					</div>
 
 					{/* Mobile menu button */}
