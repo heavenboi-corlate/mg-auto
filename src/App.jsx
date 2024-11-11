@@ -1,6 +1,6 @@
 import React from "react";
 import "./App.css";
-import NavBar from "./components/NavBar";
+import Navbar from "./components/NavBar"
 import Hero from "./components/Hero";
 import AboutUs from "./components/AboutUs";
 import Service from "./components/Service";
@@ -31,7 +31,7 @@ const servicesData = [
 const App = () => {
 	return (
 		<div className="App">
-			<NavBar />
+			<Navbar />
 			<Hero />
 			<AboutUs />
 			<section id="services">
