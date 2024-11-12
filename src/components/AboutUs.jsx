@@ -1,11 +1,11 @@
-import { Award, Users, Star, Tool } from 'lucide-react';
+import { Award, Users, Star, Briefcase } from 'lucide-react';
 
 const AboutUs = () => {
   const stats = [
     { icon: Award, label: 'Years Experience', value: '25+' },
     { icon: Users, label: 'Happy Customers', value: '15K+' },
     { icon: Star, label: 'Expert Mechanics', value: '50+' },
-    { icon: Tool, label: 'Services Completed', value: '30K+' }
+    { icon: Briefcase, label: 'Services Completed', value: '30K+' }
   ];
 
   return (
