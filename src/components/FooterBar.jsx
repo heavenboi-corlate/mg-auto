@@ -60,7 +60,7 @@ const Footer = () => {
               </li>
               <li className="flex items-center space-x-3 text-gray-400">
                 <Mail className="w-5 h-5 text-yellow-400" />
-                <span>info@autocarepro.com</span>
+                <span>info@mgautoworkshop.co.za</span>
               </li>
               <li className="flex items-center space-x-3 text-gray-400">
                 <MapPin className="w-5 h-5 text-yellow-400" />
@@ -98,18 +98,7 @@ const Footer = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <div className="text-gray-400 text-sm">
-              © {new Date().getFullYear()} AutoCarePro. All rights reserved.
-            </div>
-            <div className="flex space-x-6 text-sm">
-              <a href="#" className="text-gray-400 hover:text-yellow-400 transition-colors">
-                Privacy Policy
-              </a>
-              <a href="#" className="text-gray-400 hover:text-yellow-400 transition-colors">
-                Terms of Service
-              </a>
-              <a href="#" className="text-gray-400 hover:text-yellow-400 transition-colors">
-                Cookie Policy
-              </a>
+              © {new Date().getFullYear()} MG Automobile. All rights reserved.  website by <a href="corlate.co.za" className="text-purple-400 hover:underline">Corlate Technologies</a>
             </div>
           </div>
         </div>
