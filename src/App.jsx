@@ -1,26 +1,39 @@
-import React from "react";
-import "./index.css";
-import Navbar from "./components/NavBar"
+import { useState, useEffect } from "react";
+import LoadingSpinner from "./components/LoadingSpinner";
+import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import AboutUs from "./components/AboutUs";
 import Service from "./components/Service";
 import Testimonials from "./components/Testimonials";
-import ContactUs from "./components/ContactUs";
 import FooterBar from "./components/FooterBar";
 
+function App() {
+	const [isLoading, setIsLoading] = useState(true);
 
-const App = () => {
+	useEffect(() => {
+		const timer = setTimeout(() => {
+			setIsLoading(false);
+		}, 2000); // Adjust the loading duration as needed
+
+		return () => clearTimeout(timer);
+	}, []);
+
 	return (
-		<div className="App min-h-screen">
-			<Navbar />
-			<Hero />
-			<AboutUs />
-			<Service />
-			<Testimonials />
-			<ContactUs />
-			<FooterBar />
-		</div>
+		<>
+			{isLoading ? (
+				<LoadingSpinner fadeOut={!isLoading} />
+			) : (
+				<div className="App animate-fade-in">
+					<Navbar />
+					<Hero />
+					<AboutUs />
+					<Service />
+					<Testimonials />
+					<FooterBar />
+				</div>
+			)}
+		</>
 	);
-};
+}
 
 export default App;
