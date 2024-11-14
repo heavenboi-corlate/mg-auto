@@ -1,3 +1,43 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+html {
+	scroll-behavior: smooth;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+	width: 8px;
+}
+
+::-webkit-scrollbar-track {
+	background: #1e293b;
+}
+
+::-webkit-scrollbar-thumb {
+	background: #facc15;
+	border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+	background: #eab308;
+}
+
+/* Smooth section transitions */
+section {
+	transition: transform 0.3s ease-out, opacity 0.3s ease-out;
+}
+
+/* Smooth image loading */
+img {
+	transition: opacity 0.3s ease-in-out;
+}
+
+img.loading {
+	opacity: 0;
+}
+
+img.loaded {
+	opacity: 1;
+}
