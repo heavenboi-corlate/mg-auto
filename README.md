@@ -119,4 +119,4 @@ This project is licensed under the MIT License.
 ## Contributors
 
 - [Heaveboi-nigel](https://github.com/heavenboi-corlate)
-- [Zalisile Stuli] (https://github.com/bazileros)
+- [Zalisile Stuli](https://github.com/bazileros)
