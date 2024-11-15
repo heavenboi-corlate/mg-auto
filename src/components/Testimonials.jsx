@@ -37,7 +37,7 @@ const Testimonials = () => {
 				{/* Header */}
 				<div className="max-w-3xl mx-auto mb-16 text-center">
 					<h2 className="mb-4 text-4xl font-bold text-white">
-						What Our <span className="text-yellow-400">Clients Say</span>
+						What Our <span className="text-red-600">Clients Say</span>
 					</h2>
 					<p className="text-lg text-gray-300">
 						Don't just take our word for it - hear from our satisfied customers
@@ -52,7 +52,7 @@ const Testimonials = () => {
 							className="relative p-8 bg-white/5 backdrop-blur-lg rounded-2xl group"
 						>
 							{/* Quote Icon */}
-							<Quote className="absolute w-10 h-10 top-6 right-6 text-yellow-400/20" />
+							<Quote className="absolute w-10 h-10 top-6 right-6 text-red-400/20" />
 
 							{/* Content */}
 							<p className="relative z-10 mb-6 text-gray-300">
@@ -62,10 +62,7 @@ const Testimonials = () => {
 							{/* Rating */}
 							<div className="flex gap-1 mb-4">
 								{[...Array(testimonial.rating)].map((_, i) => (
-									<Star
-										key={i}
-										className="w-5 h-5 text-yellow-400 fill-yellow-400"
-									/>
+									<Star key={i} className="w-5 h-5 text-red-400 fill-red-400" />
 								))}
 							</div>
 
@@ -85,7 +82,7 @@ const Testimonials = () => {
 							</div>
 
 							{/* Hover Effects */}
-							<div className="absolute inset-0 transition-opacity duration-300 opacity-0 bg-gradient-to-r from-yellow-400/0 to-yellow-400/5 group-hover:opacity-100 rounded-2xl" />
+							<div className="absolute inset-0 transition-opacity duration-300 opacity-0 bg-gradient-to-r from-red-400/0 to-red-400/5 group-hover:opacity-100 rounded-2xl" />
 						</div>
 					))}
 				</div>
@@ -99,7 +96,7 @@ const Testimonials = () => {
 						{ label: "Five-Star Reviews", value: "1000+" },
 					].map((stat) => (
 						<div key={stat.label}>
-							<div className="mb-2 text-3xl font-bold text-yellow-400">
+							<div className="mb-2 text-3xl font-bold text-red-400">
 								{stat.value}
 							</div>
 							<div className="text-gray-400">{stat.label}</div>

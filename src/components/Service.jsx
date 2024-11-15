@@ -36,7 +36,7 @@ const services = [
 		icon: PaintBucket,
 		title: "Oil Change",
 		description:
-			"Professional oil change service using premium synthetic oils and OEM filters.",
+			"Professional oil change service using premium synthetic oils and OEM filters. exclusively in-store",
 		price: "From R450",
 	},
 	{
@@ -86,7 +86,7 @@ const Services = () => {
 				{/* Header */}
 				<div className="max-w-3xl mx-auto mb-16 text-center">
 					<h2 className="mb-4 text-4xl font-extrabold text-white">
-						Our Professional <span className="text-yellow-400">Services</span>
+						Our Professional <span className="text-red-600">Services</span>
 					</h2>
 					<p className="text-lg text-gray-300">
 						Comprehensive automobile care services delivered by certified
@@ -103,7 +103,7 @@ const Services = () => {
 						>
 							{/* Icon */}
 							<div className="z-10 mb-6">
-								<service.icon className="w-12 h-12 text-yellow-400 transition-transform duration-300 group-hover:scale-110" />
+								<service.icon className="w-12 h-12 text-red-500 transition-transform duration-300 group-hover:scale-110" />
 							</div>
 
 							{/* Title */}
@@ -112,20 +112,20 @@ const Services = () => {
 							</h3>
 
 							{/* Description */}
-							<p className="z-10 mb-4 text-white text-opacity-90">
+							<p className="z-10 mb-4 text-slate-100 text-opacity-90">
 								{service.description}
 							</p>
 
 							{/* Price as Button */}
 							<button
-								className="px-6 py-2 mt-4 font-semibold text-white transition-all bg-yellow-400 rounded-full hover:bg-yellow-500 group-hover:scale-110"
+								className="px-6 py-2 mt-4 font-semibold text-white transition-all bg-red-600 rounded-full hover:bg-red-400 group-hover:scale-110"
 								onClick={scrollToBookingForm}
 							>
 								{service.price}
 							</button>
 
 							{/* Hover Effects */}
-							<div className="absolute inset-0 transition-opacity duration-300 opacity-0 bg-gradient-to-r from-yellow-400/0 to-yellow-400/5 group-hover:opacity-100 rounded-2xl" />
+							<div className="absolute inset-0 transition-opacity duration-300 opacity-0 bg-gradient-to-r from-red-400/0 to-red-600/5 group-hover:opacity-100 rounded-2xl" />
 						</div>
 					))}
 				</div>
@@ -133,7 +133,7 @@ const Services = () => {
 				{/* CTA Section */}
 				<div className="mt-16 text-center">
 					<button
-						className="px-8 py-4 font-semibold transition-all bg-yellow-400 rounded-full hover:bg-yellow-500 text-slate-900 hover:shadow-lg hover:shadow-yellow-400/20 active:scale-95"
+						className="px-8 py-4 font-semibold transition-all bg-red-600 rounded-full hover:bg-red-400 text-slate-300 hover:shadow-lg hover:shadow-red-400/20 active:scale-95"
 						onClick={scrollToBookingForm}
 					>
 						Schedule Service Now

@@ -57,7 +57,7 @@ const AboutUs = () => {
 						</div>
 
 						{/* Accent Elements */}
-						<div className="absolute rounded-full -bottom-8 -left-8 w-72 h-72 bg-yellow-400/10 blur-3xl -z-10"></div>
+						<div className="absolute rounded-full -bottom-8 -left-8 w-72 h-72 bg-red-400/10 blur-3xl -z-10"></div>
 						<div className="absolute rounded-full -top-8 -right-8 w-72 h-72 bg-slate-900/10 blur-3xl -z-10"></div>
 					</div>
 
@@ -66,13 +66,13 @@ const AboutUs = () => {
 						<div>
 							<h2 className="mb-4 text-4xl font-bold text-slate-900">
 								Your Trusted Partner in{" "}
-								<span className="text-yellow-400">Auto Care</span>
+								<span className="text-red-600">Auto Care</span>
 							</h2>
 							<p className="text-lg leading-relaxed text-gray-600">
-								Since 1998, AutoCarePro has been delivering top-notch automotive
-								services with unwavering commitment to quality and customer
-								satisfaction. Our state-of-the-art facility and ASE-certified
-								technicians ensure your vehicle receives the best care possible.
+								Welcome to MG Auto, South Africa. We are dedicated to providing
+								top-notch automotive services with a focus on customer
+								satisfaction. Our experienced team and state-of-the-art
+								facilities ensure that your vehicle is in the best hands.
 							</p>
 						</div>
 
@@ -124,7 +124,7 @@ const AboutUs = () => {
 									animate={{ opacity: 1 }}
 									transition={{ duration: 1, delay: 0.3 }}
 								>
-									<Icon className="w-8 h-8 mx-auto mb-2 text-yellow-400" />
+									<Icon className="w-8 h-8 mx-auto mb-2 text-red-400" />
 									<div className="text-2xl font-bold text-slate-900">
 										{value}
 									</div>

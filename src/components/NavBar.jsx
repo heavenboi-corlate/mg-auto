@@ -12,9 +12,10 @@ const Navbar = () => {
 			<div id="Navbar" className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
 				<div className="flex items-center justify-between h-20">
 					{/* Logo */}
+
 					<div className="flex-shrink-0">
 						<span className="text-2xl font-bold text-white">
-							Mg<span className="text-yellow-400">Auto</span>
+							Mg<span className="text-red-600">Auto</span>
 						</span>
 					</div>
 
@@ -24,33 +25,33 @@ const Navbar = () => {
 							<a
 								href="#"
 								onClick={() => scrollTo("home")} // Scroll to the home section
-								className="text-white transition-colors hover:text-yellow-400"
+								className="text-white transition-colors hover:text-red-400"
 							>
 								Home
 							</a>
 							<a
 								href="#aboutus"
 								onClick={() => scrollTo("aboutus")} // Scroll to the about section
-								className="text-gray-300 transition-colors hover:text-yellow-400"
+								className="text-gray-300 transition-colors hover:text-red-400"
 							>
 								About
 							</a>
 							<a
 								href="#services"
 								onClick={() => scrollTo("services")} // Scroll to the services section
-								className="text-gray-300 transition-colors hover:text-yellow-400"
+								className="text-gray-300 transition-colors hover:text-red-400"
 							>
 								Services
 							</a>
 							<a
 								href="#testimonials"
 								onClick={() => scrollTo("testimonials")} // Scroll to testimonials section
-								className="text-gray-300 transition-colors hover:text-yellow-400"
+								className="text-gray-300 transition-colors hover:text-red-400"
 							>
 								Testimonials
 							</a>
 							<button
-								className="px-6 py-2.5 bg-yellow-400 hover:bg-yellow-500 text-slate-900 rounded-full font-semibold transition-all hover:shadow-lg hover:shadow-yellow-400/20 active:scale-95"
+								className="px-6 py-2.5 bg-red-600 hover:bg-red-400 text-slate-300 rounded-full font-semibold transition-all hover:shadow-lg hover:shadow-red-400/20 active:scale-95"
 								onClick={() => scrollTo("BookingForm")} // Scroll to booking form
 							>
 								Book Now
@@ -104,7 +105,7 @@ const Navbar = () => {
 							Testimonials
 						</a>
 						<button
-							className="w-full mt-2 px-6 py-2.5 bg-yellow-400 hover:bg-yellow-500 text-slate-900 rounded-full font-semibold transition-all hover:shadow-lg hover:shadow-yellow-400/20 active:scale-95"
+							className="w-full mt-2 px-6 py-2.5 bg-red-600 hover:bg-red-400 text-slate-300 rounded-full font-semibold transition-all hover:shadow-lg hover:shadow-red-400/20 active:scale-95"
 							onClick={() => scrollTo("BookingForm")}
 						>
 							Book Now

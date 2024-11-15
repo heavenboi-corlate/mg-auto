@@ -16,22 +16,22 @@ html {
 }
 
 ::-webkit-scrollbar-thumb {
-	background: #facc15;
+	background: #dc2626;
 	border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-	background: #eab308;
+	background: #dc2626;
 }
 
 /* Smooth section transitions */
 section {
-	transition: transform 0.3s ease-out, opacity 0.3s ease-out;
+	transition: transform 0.4s ease-out, opacity 0.4s ease-out;
 }
 
 /* Smooth image loading */
 img {
-	transition: opacity 0.3s ease-in-out;
+	transition: opacity 0.4s ease-in-out;
 }
 
 img.loading {

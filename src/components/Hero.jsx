@@ -12,7 +12,7 @@ const Hero = () => {
 	return (
 		<div
 			id="hero"
-			className="relative min-h-screen overflow-hidden bg-gradient-to-b from-slate-900 to-slate-800"
+			className="relative min-h-screen overflow-hidden bg-gradient-to-b from-slate-950 to-slate-800"
 		>
 			{/* Fallback Gradient Background */}
 			<div
@@ -50,17 +50,16 @@ const Hero = () => {
 					<div className="space-y-8">
 						<h1 className="text-4xl font-bold leading-tight text-white md:text-5xl lg:text-6xl">
 							Professional Auto Care You Can{" "}
-							<span className="text-yellow-400">Trust</span>
+							<span className="text-red-600">Trust</span>
 						</h1>
 						<p className="max-w-xl text-lg text-gray-300">
 							Expert maintenance and repair services to keep your vehicle
 							running at peak performance. Experience the difference of
 							certified technicians and state-of-the-art diagnostics.
 						</p>
-
 						{/* CTA Buttons */}
 						<div className="flex flex-col gap-4 sm:flex-row">
-							<button className="flex items-center justify-center gap-2 px-8 py-4 font-semibold transition-all bg-yellow-400 rounded-full hover:bg-yellow-500 text-slate-900 hover:shadow-lg hover:shadow-yellow-400/20 active:scale-95">
+							<button className="flex items-center justify-center gap-2 px-8 py-4 font-semibold transition-all bg-red-600 rounded-full hover:bg-red-400 text-slate-200 hover:shadow-lg hover:shadow-red-400/20 active:scale-95">
 								Book Service Now
 								<ArrowRight size={20} />
 							</button>
@@ -68,30 +67,29 @@ const Hero = () => {
 								View Services
 							</button>
 						</div>
-
 						{/* Features */}
 						<div className="grid grid-cols-1 gap-6 pt-8 sm:grid-cols-3">
 							<div className="flex items-center gap-3">
-								<Shield className="w-10 h-10 text-yellow-400" />
+								<Shield className="w-10 h-10 text-red-500" />
 								<div>
 									<h3 className="font-semibold text-white">
 										Certified Experts
 									</h3>
-									<p className="text-sm text-gray-400">ASE Certified Team</p>
+									<p className="text-sm text-gray-300">ASE Certified Team</p>
 								</div>
 							</div>
 							<div className="flex items-center gap-3">
-								<Clock className="w-10 h-10 text-yellow-400" />
+								<Clock className="w-10 h-10 text-red-500" />
 								<div>
 									<h3 className="font-semibold text-white">Quick Service</h3>
-									<p className="text-sm text-gray-400">Same Day Available</p>
+									<p className="text-sm text-gray-300">Same Day Available</p>
 								</div>
 							</div>
 							<div className="flex items-center gap-3">
-								<Wrench className="w-10 h-10 text-yellow-400" />
+								<Wrench className="w-10 h-10 text-red-500" />
 								<div>
 									<h3 className="font-semibold text-white">Modern Tools</h3>
-									<p className="text-sm text-gray-400">Latest Equipment</p>
+									<p className="text-sm text-gray-300">Latest Equipment</p>
 								</div>
 							</div>
 						</div>
