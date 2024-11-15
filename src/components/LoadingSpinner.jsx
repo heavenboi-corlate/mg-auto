@@ -8,7 +8,7 @@ const LoadingSpinner = ({ fadeOut }) => {
 			}`}
 		>
 			<div className="relative">
-				<Wrench className="w-12 h-12 text-yellow-400 animate-spin" />
+				<Wrench className="w-12 h-12 text-red-400 animate-spin" />
 				<div className="absolute top-0 left-0 w-12 h-12 animate-ping">
 					<div className="w-full h-full rounded-full bg-yellow-400/20"></div>
 				</div>
