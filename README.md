@@ -4,6 +4,21 @@
 
 MG Automobile is a web application for managing and showcasing automotive services. It provides a user-friendly interface for customers to book services, view testimonials, and learn more about the company.
 
+## Glossary
+
+- [Features](#features)
+- [Technologies Used](#technologies-used)
+- [Getting Started](#getting-started)
+  - [Prerequisites](#prerequisites)
+  - [Installation](#installation)
+  - [Running the Project](#running-the-project)
+  - [Linting](#linting)
+  - [Email Development](#email-development)
+- [Deployment](#deployment)
+- [License](#license)
+- [Acknowledgements](#acknowledgements)
+- [Contributors](#contributors)
+
 ## Features
 
 - Responsive design
@@ -19,6 +34,8 @@ MG Automobile is a web application for managing and showcasing automotive servic
 - Tailwind CSS
 - Framer Motion
 - Lucide Icons
+- react-email
+- resend
 
 ## Getting Started
 
@@ -26,8 +43,8 @@ Follow these instructions to set up and run the project locally.
 
 ### Prerequisites
 
-- Node.js (version 18 or higher)
-- npm (version 7 or higher)
+- Node.js (version 23 or higher)
+- npm (version 10 or higher) `use node version manager, for node version management`
 
 ### Installation
 
@@ -98,3 +115,8 @@ This project is licensed under the MIT License.
 - [Tailwind CSS](https://tailwindcss.com/)
 - [Framer Motion](https://www.framer.com/motion/)
 - [Lucide Icons](https://lucide.dev/)
+
+## Contributors
+
+- [Heaveboi-nigel](https://github.com/heavenboi-corlate)
+- [Zalisile Stuli] (https://github.com/bazileros)
