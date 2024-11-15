@@ -1,4 +1,4 @@
-![MG Automobile Banner](https://example.com/banner-image.jpg)
+![MG Automobile Banner](https://github.com/heavenboi-corlate/mg-auto/blob/main/public/prod.png)
 
 # MG Automobile
 
