@@ -26,7 +26,6 @@ MG Automobile is a web application for managing and showcasing automotive servic
 - Interactive service catalog with detailed descriptions
 - Customer testimonials and reviews section
 - About Us section highlighting company values and history
-- Newsletter subscription with email integration
 - Contact form with automated email responses
 - Custom animations using Framer Motion
 - Mobile-first design approach
