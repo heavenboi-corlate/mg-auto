@@ -1,23 +1,44 @@
-# Use an official Node.js runtime as a parent image
-FROM node:18-alpine
+# Build stage
+FROM node:18-alpine AS builder
 
-# Set the working directory
-WORKDIR /src
+# Set working directory
+WORKDIR /app
 
-# Copy package.json and package-lock.json
+# Copy package files
 COPY package*.json ./
 
 # Install dependencies
-RUN npm install
+RUN npm ci
 
-# Copy the rest of the application code
+# Copy source code
 COPY . .
 
 # Build the application
 RUN npm run build
 
-# Expose the port the app runs on
-EXPOSE 3000 # TODO change to prod port
+# Production stage
+FROM node:18-alpine AS production
 
-# Define the command to run the app
-CMD ["npm", "run", "preview"]
+WORKDIR /app
+
+# Copy built assets from builder
+COPY --from=builder /app/dist ./dist
+COPY --from=builder /app/package*.json ./
+
+# Install only production dependencies
+RUN npm ci --only=production
+
+# Set environment variables
+ENV NODE_ENV=production
+ENV PORT=4173
+
+# Expose the port Vite uses for preview
+EXPOSE 4173
+
+# Use a non-root user
+RUN addgroup -g 1001 -S nodejs
+RUN adduser -S nodejs -u 1001
+USER nodejs
+
+# Start the application
+CMD ["npm", "run", "preview", "--", "--host", "0.0.0.0", "--port", "4173"]
