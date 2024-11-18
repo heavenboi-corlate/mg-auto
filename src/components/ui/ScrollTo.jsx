@@ -1,4 +1,4 @@
-const scrollTo = (targetId) => {
+const ScrollTo = (targetId) => {
 	const target = document.getElementById(targetId);
 	if (target) {
 		target.scrollIntoView({ behavior: "smooth", block: "start" });
@@ -8,4 +8,4 @@ const scrollTo = (targetId) => {
 	}
 };
 
-export default scrollTo;
+export { ScrollTo };

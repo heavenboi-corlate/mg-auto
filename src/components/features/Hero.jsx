@@ -1,6 +1,6 @@
 import { Shield, Clock, Wrench, ArrowRight } from "lucide-react";
 import { useState } from "react";
-import BookingForm from "./BookingForm"; // Import the BookingForm component
+import BookingForm from "./BookingForm";
 
 const Hero = () => {
 	const [isLoaded, setIsLoaded] = useState(false);
@@ -97,7 +97,6 @@ const Hero = () => {
 
 					{/* Right Column - Booking Form */}
 					<div className="w-full max-w-md lg:justify-self-end">
-						{/* Replace the inline form with the imported BookingForm */}
 						<BookingForm />
 					</div>
 				</div>

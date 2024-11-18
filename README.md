@@ -21,21 +21,26 @@ MG Automobile is a web application for managing and showcasing automotive servic
 
 ## Features
 
-- Responsive design
-- Smooth scrolling and transitions
-- Service booking form
-- Customer testimonials
-- Newsletter subscription
+- Modern, responsive design with smooth animations
+- Service booking and management system
+- Interactive service catalog with detailed descriptions
+- Customer testimonials and reviews section
+- About Us section highlighting company values and history
+- Newsletter subscription with email integration
+- Contact form with automated email responses
+- Custom animations using Framer Motion
+- Mobile-first design approach
 
 ## Technologies Used
 
-- React
-- Vite
-- Tailwind CSS
-- Framer Motion
-- Lucide Icons
-- react-email
-- resend
+- React 18.3
+- Vite 5.4
+- Tailwind CSS 3.4
+- Framer Motion 11.11
+- Lucide React 0.456
+- React Email 3.0
+- Resend 4.0
+- React Icons 5.3
 
 ## Getting Started
 
@@ -43,8 +48,8 @@ Follow these instructions to set up and run the project locally.
 
 ### Prerequisites
 
-- Node.js (version 23 or higher)
-- npm (version 10 or higher) `use node version manager, for node version management`
+- Node.js (version 18 or higher)
+- npm (version 9 or higher) `use node version manager, for node version management`
 
 ### Installation
 
@@ -60,6 +65,12 @@ Follow these instructions to set up and run the project locally.
    ```sh
    npm install
    ```
+4. Set up environment variables:
+   - Copy `.env-example` to `.env`
+   - Update the variables with your own values:
+     ```
+     VITE_RESEND_API_KEY=your_resend_api_key
+     ```
 
 ### Running the Project
 

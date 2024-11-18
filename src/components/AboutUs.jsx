@@ -1,142 +1,73 @@
-import { Award, Users, Star, Briefcase } from "lucide-react";
-import { motion } from "framer-motion";
+import { Gallery } from "./ui";
+
+const galleryImages = [
+  {
+    url: "https://images.unsplash.com/photo-1632583824020-1c71cc0ce7c4?q=80&w=1200",
+    alt: "Modern Auto Workshop",
+    caption: "State-of-the-art diagnostic equipment"
+  },
+  {
+    url: "https://images.unsplash.com/photo-1630026317249-c1c68c8bdf04?q=80&w=1200",
+    alt: "Expert Mechanics",
+    caption: "Our team of certified mechanics"
+  },
+  {
+    url: "https://images.unsplash.com/photo-1619642751034-765dfdf7c58e?q=80&w=1200",
+    alt: "Premium Service",
+    caption: "Premium service for luxury vehicles"
+  },
+  {
+    url: "https://images.unsplash.com/photo-1625047509168-a7026f36de04?q=80&w=1200",
+    alt: "Customer Service",
+    caption: "Dedicated customer service"
+  }
+];
 
 const AboutUs = () => {
-	const stats = [
-		{ icon: Award, label: "Years Experience", value: "25+" },
-		{ icon: Users, label: "Happy Customers", value: "15K+" },
-		{ icon: Star, label: "Expert Mechanics", value: "20+" },
-		{ icon: Briefcase, label: "Services Completed", value: "30K+" },
-	];
+  return (
+    <section className="container mx-auto px-4 py-16">
+      <div className="max-w-4xl mx-auto">
+        <h2 className="text-4xl font-bold text-center mb-8">About MG Auto</h2>
+        <p className="text-lg text-gray-700 mb-12 text-center">
+          With over 15 years of experience, we provide top-tier automotive services
+          with a commitment to excellence and customer satisfaction.
+        </p>
+        
+        {/* Gallery Section */}
+        <div className="mb-16">
+          <Gallery images={galleryImages} />
+        </div>
 
-	return (
-		<section id="aboutus" className="py-20 bg-white">
-			<div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
-				{/* Grid Container */}
-				<div className="grid items-center gap-12 lg:grid-cols-2">
-					{/* Left Column - Images */}
-					<div className="relative">
-						<div className="grid grid-cols-2 gap-4">
-							<div className="space-y-4">
-								{/* Image with animation */}
-								<motion.img
-									src="/work1.jpg"
-									alt="Mechanic working"
-									className="object-cover w-full h-64 shadow-lg rounded-2xl"
-									initial={{ opacity: 0 }}
-									animate={{ opacity: 1 }}
-									transition={{ duration: 1 }}
-								/>
-								<motion.img
-									src="/work2.jpg"
-									alt="Auto diagnostic"
-									className="object-cover w-full h-48 shadow-lg rounded-2xl"
-									initial={{ opacity: 0 }}
-									animate={{ opacity: 1 }}
-									transition={{ duration: 1, delay: 0.2 }}
-								/>
-							</div>
-							<div className="pt-8 space-y-4">
-								<motion.img
-									src="/work3.jpg"
-									alt="Car service"
-									className="object-cover w-full h-48 shadow-lg rounded-2xl"
-									initial={{ opacity: 0 }}
-									animate={{ opacity: 1 }}
-									transition={{ duration: 1, delay: 0.4 }}
-								/>
-								<motion.img
-									src="/work5.jpg"
-									alt="Car maintenance"
-									className="object-cover w-full h-64 shadow-lg rounded-2xl"
-									initial={{ opacity: 0 }}
-									animate={{ opacity: 1 }}
-									transition={{ duration: 1, delay: 0.6 }}
-								/>
-							</div>
-						</div>
-
-						{/* Accent Elements */}
-						<div className="absolute rounded-full -bottom-8 -left-8 w-72 h-72 bg-red-400/10 blur-3xl -z-10"></div>
-						<div className="absolute rounded-full -top-8 -right-8 w-72 h-72 bg-slate-900/10 blur-3xl -z-10"></div>
-					</div>
-
-					{/* Right Column - Content */}
-					<div className="space-y-8">
-						<div>
-							<h2 className="mb-4 text-4xl font-bold text-slate-900">
-								Your Trusted Partner in{" "}
-								<span className="text-red-600">Auto Care</span>
-							</h2>
-							<p className="text-lg leading-relaxed text-gray-600">
-								Welcome to MG Auto, South Africa. We are dedicated to providing
-								top-notch automotive services with a focus on customer
-								satisfaction. Our experienced team and state-of-the-art
-								facilities ensure that your vehicle is in the best hands.
-							</p>
-						</div>
-
-						{/* Key Features */}
-						<div className="grid grid-cols-2 gap-6">
-							<div className="space-y-2">
-								<h3 className="text-xl font-semibold text-slate-900">
-									Expert Team
-								</h3>
-								<p className="text-gray-600">
-									ASE-certified mechanics with continuous training in latest
-									automotive technologies.
-								</p>
-							</div>
-							<div className="space-y-2">
-								<h3 className="text-xl font-semibold text-slate-900">
-									Modern Equipment
-								</h3>
-								<p className="text-gray-600">
-									Advanced diagnostic tools and equipment for precise service
-									delivery.
-								</p>
-							</div>
-							<div className="space-y-2">
-								<h3 className="text-xl font-semibold text-slate-900">
-									Quality Parts
-								</h3>
-								<p className="text-gray-600">
-									Only genuine OEM and high-quality aftermarket parts used.
-								</p>
-							</div>
-							<div className="space-y-2">
-								<h3 className="text-xl font-semibold text-slate-900">
-									Fair Pricing
-								</h3>
-								<p className="text-gray-600">
-									Transparent pricing with no hidden fees or unexpected charges.
-								</p>
-							</div>
-						</div>
-
-						{/* Stats */}
-						<div className="grid grid-cols-2 gap-8 pt-8 sm:grid-cols-4">
-							{stats.map(({ icon: Icon, label, value }) => (
-								<motion.div
-									key={label}
-									className="text-center"
-									initial={{ opacity: 0 }}
-									animate={{ opacity: 1 }}
-									transition={{ duration: 1, delay: 0.3 }}
-								>
-									<Icon className="w-8 h-8 mx-auto mb-2 text-red-400" />
-									<div className="text-2xl font-bold text-slate-900">
-										{value}
-									</div>
-									<div className="text-sm text-gray-600">{label}</div>
-								</motion.div>
-							))}
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>
-	);
+        {/* Features Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-12">
+          <div className="p-6 bg-white rounded-xl shadow-lg">
+            <h3 className="text-xl font-semibold mb-4">Expert Team</h3>
+            <p className="text-gray-600">
+              Our certified mechanics bring years of experience and expertise to every job.
+            </p>
+          </div>
+          <div className="p-6 bg-white rounded-xl shadow-lg">
+            <h3 className="text-xl font-semibold mb-4">Modern Equipment</h3>
+            <p className="text-gray-600">
+              We use the latest diagnostic and repair equipment to ensure precise service.
+            </p>
+          </div>
+          <div className="p-6 bg-white rounded-xl shadow-lg">
+            <h3 className="text-xl font-semibold mb-4">Quality Service</h3>
+            <p className="text-gray-600">
+              We pride ourselves on delivering consistent, high-quality service.
+            </p>
+          </div>
+          <div className="p-6 bg-white rounded-xl shadow-lg">
+            <h3 className="text-xl font-semibold mb-4">Customer First</h3>
+            <p className="text-gray-600">
+              Your satisfaction is our priority, with transparent communication throughout.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
 };
 
 export default AboutUs;

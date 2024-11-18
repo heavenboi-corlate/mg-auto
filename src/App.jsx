@@ -1,39 +1,40 @@
-import { useState, useEffect } from "react";
-import LoadingSpinner from "./components/LoadingSpinner";
-import Navbar from "./components/NavBar";
-import Hero from "./components/Hero";
-import AboutUs from "./components/AboutUs";
-import Service from "./components/Service";
-import Testimonials from "./components/Testimonials";
-import FooterBar from "./components/FooterBar";
+import { MainLayout } from "./layouts/MainLayout";
+import { LoadingSpinner } from "./components/ui";
+import { Hero, AboutUs, Service, Testimonials } from "./components/features";
+import { useLoading } from "./hooks/useLoading";
+import { ErrorBoundary } from "./components/layout";
+import { ToastProvider } from "./components/ui";
+import { Suspense } from "react";
+import { CardSkeleton } from "./components/ui";
 
-function App() {
-	const [isLoading, setIsLoading] = useState(true);
+const ServiceSection = () => (
+  <Suspense fallback={<CardSkeleton />}>
+    <Service />
+  </Suspense>
+);
 
-	useEffect(() => {
-		const timer = setTimeout(() => {
-			setIsLoading(false);
-		}, 2000); // Adjust the loading duration as needed
+const TestimonialsSection = () => (
+  <Suspense fallback={<CardSkeleton repeat={3} />}>
+    <Testimonials />
+  </Suspense>
+);
 
-		return () => clearTimeout(timer);
-	}, []);
+const App = () => {
+  const { isLoading, fadeOut } = useLoading();
 
-	return (
-		<>
-			{isLoading ? (
-				<LoadingSpinner fadeOut={!isLoading} />
-			) : (
-				<div className="App animate-fade-in">
-					<Navbar />
-					<Hero />
-					<AboutUs />
-					<Service />
-					<Testimonials />
-					<FooterBar />
-				</div>
-			)}
-		</>
-	);
-}
+  return (
+    <ErrorBoundary>
+      <ToastProvider>
+        <MainLayout>
+          {isLoading && <LoadingSpinner fadeOut={fadeOut} />}
+          <Hero />
+          <AboutUs />
+          <ServiceSection />
+          <TestimonialsSection />
+        </MainLayout>
+      </ToastProvider>
+    </ErrorBoundary>
+  );
+};
 
 export default App;
